@@ -1,0 +1,6 @@
+README for Translation of infix statement to postfix statement program
+
+write infix statement into infix.txt
+ - no blank space
+ - available only single digit
+ - infix statement shoule end with '#'
