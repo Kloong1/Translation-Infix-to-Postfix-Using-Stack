@@ -1,9 +1,10 @@
 #include <stdio.h>
+#define ElementType char
 #define STACK_CAPACITY 1024
 
 typedef struct _STACK{
 	int top;
-	char stack[STACK_CAPACITY];
+	ElementType stack[STACK_CAPACITY];
 } STACK;
 
 int isEmpty(STACK* s){
@@ -14,7 +15,7 @@ int isFull(STACK* s){
 	return s->top == STACK_CAPACITY - 1;
 }
 
-char Top(STACK* s){
+ElementType Top(STACK* s){
 	if(isEmpty(s)){
 		printf("Error: Stack is empty!\n");
 		return '\0'; //return NULL
@@ -32,7 +33,7 @@ void Pop(STACK* s){
 	(s->top)--;
 }
 
-void Push(STACK* s, char data){
+void Push(STACK* s, ElementType data){
 	if(isFull(s)){
 		printf("Error: Stack is Full!\n");
 		return;
